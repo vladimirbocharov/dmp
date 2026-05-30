@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Блок 3 — Метрики и операционный ритм</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script src="auth.js"></script>
+<div class="page">
+  <nav class="nav">
+    <a class="nav-logo" href="main.html"><div class="nav-mark">DMP</div><span class="nav-name">СОДА · DMP</span></a>
+    <div class="nav-links">
+      <a href="main.html">Главная</a>
+      <a href="block-0.html" class="active">Велком-курс</a>
+      <a href="dmp-book.html">DMP Book</a>
+      <button class="logout" onclick="logout()">Выйти</button>
+    </div>
+  </nav>
+  <div class="breadcrumb"><a href="main.html">Главная</a><span>→</span><a href="main.html">Велком-курс</a><span>→</span>Блок 3</div>
+
+  <div class="block-top-label">
+    <span class="block-pill">Блок 3</span>
+    <span class="block-for">Для всех · Первая–вторая неделя</span>
+  </div>
+  <div class="block-hero-num">03</div>
+  <h1 class="block-title">Метрики и операционный ритм</h1>
+  <p class="block-desc">Какие цифры главные, где их смотреть и как устроен рабочий ритм команды.</p>
+
+  <div class="b-section">
+    <div class="b-inner">
+      <div class="b-label">Метрики</div>
+      <div class="b-content">
+        <h2>📊 Какие метрики главные</h2>
+        <p>Все метрики делятся на два типа:</p>
+        <div class="two-cards">
+          <div class="two-card"><span class="two-card-icon">⚙️</span><strong>Производственные</strong><p>Количество и качество того, что мы делаем: лиды, встречи, конверсии, расход по каждому юниту.</p></div>
+          <div class="two-card"><span class="two-card-icon">💰</span><strong>Коммерческие</strong><p>Итог в деньгах: выручка, прибыль, монетизация.</p></div>
+        </div>
+        <div class="accent-box accent-blue"><p>Одно без другого не работает. Производство объясняет почему получился такой коммерческий результат. Коммерция показывает стоит ли то, что мы делаем, своих денег.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-section">
+    <div class="b-inner">
+      <div class="b-label">Воронка Зари</div>
+      <div class="b-content">
+        <h2>🔍 Воронка по Заре</h2>
+        <p>Основной ориентир по производству — воронка Зари. Именно здесь основная маржа, поэтому смотрим детально. По КЦ отслеживаем:</p>
+        <table class="info-table">
+          <thead><tr><th>Метрика</th><th>Что показывает</th></tr></thead>
+          <tbody>
+            <tr><td>Лиды</td><td>Общее количество лидов, цена лида</td></tr>
+            <tr><td>Дубль / тест / шлак</td><td>Доля некачественных лидов</td></tr>
+            <tr><td>Встречи</td><td>Количество встреч, цена встречи, CV лид → встреча</td></tr>
+            <tr><td>Состоявшиеся встречи</td><td>Сколько людей реально пришли, CV встреча → состоявшаяся</td></tr>
+            <tr><td>Договоры</td><td>Внутри месяца, долёт, накопитель. Цена договора, CV состоявшаяся → договор</td></tr>
+            <tr><td>Расход</td><td>Общий расход юнита</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:14px;font-size:14px;color:#666;">По СМС и Роботу — аналогичная логика, но основной акцент на количество лидов и расход. По ПП смотрим преимущественно на финансовые показатели — количество и выручку.</p>
+        <div class="accent-box accent-amber"><p>Проджект смотрит на эти цифры ежедневно и отвечает за их выполнение.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-section">
+    <div class="b-inner">
+      <div class="b-label">Где смотреть</div>
+      <div class="b-content">
+        <h2>🖥 Где смотреть цифры</h2>
+        <p><strong>Главная таблица направления</strong> — ядро. Два листа: производство и коммерция. Обновляется регулярно, из месяца в месяц. Это основной источник правды по цифрам.</p>
+        <p>Дополнительно: Битрикс, BI, Google-таблицы и другие инструменты в зависимости от задачи.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-section">
+    <div class="b-inner">
+      <div class="b-label">Ритм</div>
+      <div class="b-content">
+        <h2>🔄 Операционный ритм</h2>
+        <div class="rhythm-list">
+          <div class="rhythm-item">
+            <div class="rhythm-day">Ежедневно</div>
+            <div class="rhythm-desc"><strong>Дейлик в чат.</strong> Каждый участник команды пишет коротко: что сделано вчера, что планируется сегодня, блокеры (если есть).</div>
+          </div>
+          <div class="rhythm-item">
+            <div class="rhythm-day">Понедельник</div>
+            <div class="rhythm-desc"><strong>Большой митинг, ~1 час.</strong> Ревью прошлой недели + задачи и планы на текущую. Говорим только на цифрах.</div>
+          </div>
+          <div class="rhythm-item">
+            <div class="rhythm-day">Среда</div>
+            <div class="rhythm-desc"><strong>Синхрон, 30–40 минут.</strong> Что сделано, какие блокеры, не даём неделе завалиться.</div>
+          </div>
+        </div>
+        <div class="accent-box accent-green" style="margin-top:16px"><p>Все задачи фиксируются в Юджайл с дедлайнами и ответственными. Устных договорённостей без фиксации не бывает.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-nav"><a href="block-2.html">← Блок 2: Как работает DMP</a><a href="block-5.html">Блок 5: Роль и цели →</a></div>
+</div>
+</body>
+</html>

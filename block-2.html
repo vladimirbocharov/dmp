@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Блок 2 — Как работает DMP</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script src="auth.js"></script>
+<div class="page">
+  <nav class="nav">
+    <a class="nav-logo" href="main.html"><div class="nav-mark">DMP</div><span class="nav-name">СОДА · DMP</span></a>
+    <div class="nav-links">
+      <a href="main.html">Главная</a>
+      <a href="block-0.html" class="active">Велком-курс</a>
+      <a href="dmp-book.html">DMP Book</a>
+      <button class="logout" onclick="logout()">Выйти</button>
+    </div>
+  </nav>
+  <div class="breadcrumb"><a href="main.html">Главная</a><span>→</span><a href="main.html">Велком-курс</a><span>→</span>Блок 2</div>
+
+  <div class="block-top-label">
+    <span class="block-pill">Блок 2</span>
+    <span class="block-for">Для всех · Первая неделя</span>
+  </div>
+  <div class="block-hero-num">02</div>
+  <h1 class="block-title">Как работает DMP</h1>
+  <p class="block-desc">Откуда берётся база, как она проходит через конвейер и где появляются деньги.</p>
+
+  <div class="b-section">
+    <div class="b-inner">
+      <div class="b-label">Суть</div>
+      <div class="b-content">
+        <h2>🎯 В двух словах</h2>
+        <div class="accent-box accent-blue"><p>DMP — это перехват клиентов конкурентов. Мы находим людей, которые уже ищут решение своей долговой проблемы, и выходим на них раньше, чем они дойдут до сделки с кем-то другим.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-section">
+    <div class="b-inner">
+      <div class="b-label">База</div>
+      <div class="b-content">
+        <h2>🗄 Откуда берётся база</h2>
+        <p>Всё начинается со сбора конкурентов. Мы берём компании, которые работают в БФЛ — юридические конторы, центры банкротства — и собираем их точки входа: сайты, номера телефонов, номера отделов продаж, СМС-отправители.</p>
+        <p>Номера отделов продаж собираем просто: оставляем фейковую заявку, они перезванивают — забираем номер.</p>
+        <p>Дальше эти точки входа мы загружаем операторам сотовой связи — напрямую или через сервисы-агрегаторы. Оператор видит по своим абонентам кто вчера звонил в эту контору, заходил на их сайт или получал от них СМС — и передаёт нам номера этих людей.</p>
+        <p>Раньше это была выгрузка за прошедший день. Сейчас всё быстрее — в некоторых случаях данные приходят почти в реальном времени, с задержкой 15 минут — 2 часа.</p>
+        <div class="accent-box accent-green"><p>На выходе — база людей, которые прямо сейчас интересуются банкротством. Горячее не бывает.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-section">
+    <div class="b-inner">
+      <div class="b-label">Конвейер</div>
+      <div class="b-content">
+        <h2>⚙️ Конвейер обработки</h2>
+        <p>База поступает в отдел и проходит через три юнита последовательно:</p>
+        <div class="conveyor">
+          <div class="conv-step"><div class="conv-icon">📞</div><div class="conv-info"><strong>КЦ — первый</strong><p>Живые операторы звонят по всей базе. Снимают сливки: находят тех, кто подходит под банкротство и готов идти на встречу. Этих людей передаём партнёрам.</p></div></div>
+          <div class="conv-arrow">↓</div>
+          <div class="conv-step"><div class="conv-icon">💬</div><div class="conv-info"><strong>СМС — второй</strong><p>До части людей КЦ не дозвонился. На следующий день СМС-юнит берёт эту часть базы и отрабатывает рассылкой.</p></div></div>
+          <div class="conv-arrow">↓</div>
+          <div class="conv-step"><div class="conv-icon">🤖</div><div class="conv-info"><strong>Робот — третий</strong><p>Кого не взяли КЦ и СМС — на третий день забирает робот. Массовый автообзвон по остатку.</p></div></div>
+        </div>
+        <p style="margin-top:16px;font-size:14px;color:#888;">Логика всегда одна: живые операторы первые, потом автоматика добирает остаток. Конкретные сроки между юнитами могут варьироваться.</p>
+        <p style="font-size:14px;color:#444;">После того как база прошла все три юнита, она считается отжатой. С ней можно либо положить на полку и вернуться позже, либо продать.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-section">
+    <div class="b-inner">
+      <div class="b-label">Маршрутизация</div>
+      <div class="b-content">
+        <h2>🔀 Заря и ПП</h2>
+        <p>Лиды, которые мы получаем на выходе, уходят двум типам партнёров.</p>
+        <div class="two-cards">
+          <div class="two-card"><span class="two-card-icon">⭐️</span><strong>Заря — приоритет</strong><p>Уникальные лиды, которых у Зари ещё не было, идут туда. Оплата за договор, основная маржа здесь.</p></div>
+          <div class="two-card"><span class="two-card-icon">🔗</span><strong>ПП — всё остальное</strong><p>Дубли — лиды, которые уже были у Зари — уходят в партнёрскую сеть. Форматы оплаты разные: за лид, за квал, за договор.</p></div>
+        </div>
+        <div class="accent-box accent-amber"><p>Маршрутизацией управляет руководитель направления. Проджект контролирует объём и качество потока в каждый вектор.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-section">
+    <div class="b-inner">
+      <div class="b-label">Доход</div>
+      <div class="b-content">
+        <h2>💰 Продажа данных</h2>
+        <p>Отжатая база — это не мусор. Её можно продать другим компаниям, которые работают в том же рынке: таким же телемаркетологам, маркетинговым командам, партнёрам.</p>
+        <p>Часто это работает как обмен: мы собираем один сегмент базы, они другой — сегменты не пересекаются, обмениваемся или продаём друг другу.</p>
+        <div class="accent-box accent-green"><p>Это отдельная статья дохода без расходной части — чистая маржа.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-section">
+    <div class="b-inner">
+      <div class="b-label">Результат</div>
+      <div class="b-content">
+        <h2>✅ Что считается результатом каждого юнита</h2>
+        <p>Результат для всех трёх юнитов одинаковый — качественный лид, который прошёл базовую квалификацию.</p>
+        <p>Качественный лид — это человек, у которого:</p>
+        <ul>
+          <li>Есть долг (чаще всего от 300 000 руб. и выше)</li>
+          <li>Нет залогового имущества, которое превышает сумму долга</li>
+          <li>Не проходил банкротство в последние 5 лет</li>
+          <li>Указал город проживания</li>
+        </ul>
+        <table class="info-table" style="margin-top:16px">
+          <thead><tr><th>Юнит</th><th>Результат</th></tr></thead>
+          <tbody>
+            <tr><td>КЦ</td><td>Качественный лид, прошедший квалификацию у живого оператора</td></tr>
+            <tr><td>СМС</td><td>Качественный лид, откликнувшийся на рассылку</td></tr>
+            <tr><td>Робот</td><td>Качественный лид из автообзвона</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-nav"><a href="block-1.html">← Блок 1: Продукт и рынок</a><a href="block-3.html">Блок 3: Метрики и ритм →</a></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Блок 0 — Добро пожаловать</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script src="auth.js"></script>
+<div class="page">
+  <nav class="nav">
+    <a class="nav-logo" href="main.html"><div class="nav-mark">DMP</div><span class="nav-name">СОДА · DMP</span></a>
+    <div class="nav-links">
+      <a href="main.html">Главная</a>
+      <a href="block-0.html" class="active">Велком-курс</a>
+      <a href="dmp-book.html">DMP Book</a>
+      <button class="logout" onclick="logout()">Выйти</button>
+    </div>
+  </nav>
+  <div class="breadcrumb"><a href="main.html">Главная</a><span>→</span><a href="main.html">Велком-курс</a><span>→</span>Блок 0</div>
+
+  <div class="block-top-label">
+    <span class="block-pill">Блок 0</span>
+    <span class="block-for">Для всех · Первый день</span>
+  </div>
+  <div class="block-hero-num">00</div>
+  <h1 class="block-title">Добро пожаловать</h1>
+  <p class="block-desc">Кто мы такие, чем занимается DMP и как устроена команда.</p>
+
+  <div class="b-section">
+    <div class="b-inner">
+      <div class="b-label">Агентство</div>
+      <div class="b-content">
+        <h2>🏢 Кто мы такие</h2>
+        <p>СОДА — трафик-агентство из Самары. Наша работа: приводить клиентов бизнесу.</p>
+        <p>Работаем в двух нишах: <strong>БФЛ</strong> — банкротство физических лиц, и <strong>НДЖ</strong> — недвижимость. Внутри каждой ниши несколько команд, каждая отвечает за свой канал трафика: Яндекс, ВКонтакте, Авито и другие. Все они генерируют лиды — находят людей, которым потенциально нужна услуга. Через агентство проходит больше 30 000 лидов в месяц, и с каждым нужно грамотно работать.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-section">
+    <div class="b-inner">
+      <div class="b-label">Что такое DMP</div>
+      <div class="b-content">
+        <h2>⚙️ Наш канал</h2>
+        <p>DMP — Data Management Platform. Это самостоятельный канал внутри агентства со своими инструментами, целями и метриками.</p>
+        <p>Мы не обрабатываем чужие лиды. Мы работаем с базами: покупаем их у операторов сотовой связи, обрабатываем своими силами — и на выходе получаем лиды самостоятельно.</p>
+        <div class="accent-box accent-blue"><p>Это принципиально отличает нас от других команд агентства. У нас свой путь от данных до результата.</p></div>
+        <p>DMP работает в обоих направлениях агентства — БФЛ и НДЖ. Этот курс про БФЛ.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-section">
+    <div class="b-inner">
+      <div class="b-label">Структура</div>
+      <div class="b-content">
+        <h2>🔧 Как устроен DMP</h2>
+        <p>DMP БФЛ делится на две ветки:</p>
+        <div class="two-cards">
+          <div class="two-card"><span class="two-card-icon">✅</span><strong>DMP БФЛ 1</strong><p>Основная ветка с выстроенными процессами. Свой полноценный КЦ (35–40 операторов), свой СМС и Робот. Процессы выстроены, всё работает.</p></div>
+          <div class="two-card"><span class="two-card-icon">🚀</span><strong>DMP БФЛ 2</strong><p>Развивающаяся ветка. Дублирует логику первой, но с задачей делать то же самое быстрее и умнее. Создаёт внутренний бенчмарк. Свой КЦ, свой рекрутер.</p></div>
+        </div>
+        <p>Обе ветки работают на одну цель — прибыль. Также в команде: 2 проджект-маркетолога, технический проджект, статист, отдел парсинга.</p>
+        <div class="accent-box accent-amber"><p>Твой куратор скажет, в какую ветку ты заходишь.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-section">
+    <div class="b-inner">
+      <div class="b-label">Главная цель</div>
+      <div class="b-content">
+        <h2>🎯 Прибыль</h2>
+        <p>Всё что мы делаем работает на одну метрику — прибыль агентства и направления.</p>
+        <div class="accent-box accent-green"><p>Не количество звонков, не объём базы, не занятость операторов. Прибыль. Это важно держать в голове с первого дня. Любое решение в отделе оценивается через эту призму.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-section">
+    <div class="b-inner">
+      <div class="b-label">Команда</div>
+      <div class="b-content">
+        <h2>👥 Кто есть кто</h2>
+        <div class="team-grid">
+          <div class="team-row"><div class="team-av">ВБ</div><div class="team-info"><span class="team-role">Руководитель направления</span><span class="team-name">Владимир Бочаров</span></div></div>
+          <div class="team-row"><div class="team-av">ДП</div><div class="team-info"><span class="team-role">Проджект-маркетолог DMP 1</span><span class="team-name">Данила Пожарнов</span></div></div>
+          <div class="team-row"><div class="team-av">ИК</div><div class="team-info"><span class="team-role">Технический проджект</span><span class="team-name">Илья Камбин</span></div></div>
+          <div class="team-row"><div class="team-av">ЕЧ</div><div class="team-info"><span class="team-role">Статист / финансист</span><span class="team-name">Евгения Чугунова</span></div></div>
+          <div class="team-row"><div class="team-av">МР</div><div class="team-info"><span class="team-role">СМС-маркетолог</span><span class="team-name">Марат Рахматуллин</span></div></div>
+          <div class="team-row"><div class="team-av">ЮТ</div><div class="team-info"><span class="team-role">Роботолог</span><span class="team-name">Юлия Тулякова</span></div></div>
+          <div class="team-row"><div class="team-av">АГ</div><div class="team-info"><span class="team-role">Рекрутер</span><span class="team-name">Алина Горбачева</span></div></div>
+          <div class="team-row"><div class="team-av">АС</div><div class="team-info"><span class="team-role">Руководитель КЦ 1</span><span class="team-name">Андрей Смирнов</span></div></div>
+          <div class="team-row"><div class="team-av">РА</div><div class="team-info"><span class="team-role">Супервайзер КЦ 1</span><span class="team-name">Роман Акимкин</span></div></div>
+          <div class="team-row"><div class="team-av">ВП</div><div class="team-info"><span class="team-role">Старший оператор КЦ 1</span><span class="team-name">Виолетта Подольская</span></div></div>
+          <div class="team-row"><div class="team-av">ТК</div><div class="team-info"><span class="team-role">Старший оператор КЦ 1</span><span class="team-name">Татьяна Коновалова</span></div></div>
+        </div>
+        <p class="team-note">Если что-то непонятно — первый человек, к которому идёшь, это твой куратор или руководитель направления.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-nav"><span></span><a href="block-1.html">Блок 1: Продукт и рынок →</a></div>
+</div>
+</body>
+</html>
