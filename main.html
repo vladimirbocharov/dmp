@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DMP — База знаний</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script src="auth.js"></script>
+
+<div class="page">
+  <nav class="nav">
+    <a class="nav-logo" href="main.html">
+      <div class="nav-mark">DMP</div>
+      <span class="nav-name">СОДА · DMP</span>
+    </a>
+    <div class="nav-links">
+      <a href="main.html" class="active">Главная</a>
+      <a href="block-0.html">Велком-курс</a>
+      <a href="dmp-book.html">DMP Book</a>
+      <button class="logout" onclick="logout()">Выйти</button>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <p class="hero-label">База знаний</p>
+    <h1>Всё, что нужно знать<br>о работе в DMP</h1>
+    <p>Велком-курс для новых сотрудников и внутренняя книга о том, как устроен и управляется инструмент.</p>
+  </div>
+
+  <div class="sec-hdr">
+    <span class="sec-label">Велком-курс</span>
+    <span class="sec-count">6 блоков</span>
+  </div>
+
+  <div class="grid">
+    <a class="card" href="block-0.html">
+      <div class="card-num">Блок 0</div>
+      <span class="card-icon">👋</span>
+      <h3>Добро пожаловать</h3>
+      <p>Кто мы, чем занимается DMP, структура команды</p>
+      <span class="badge badge-ready">Готов</span>
+    </a>
+    <a class="card" href="block-1.html">
+      <div class="card-num">Блок 1</div>
+      <span class="card-icon">👤</span>
+      <h3>Продукт и рынок</h3>
+      <p>БФЛ, путь клиента, Заря и Партнёрка, единый словарь</p>
+      <span class="badge badge-ready">Готов</span>
+    </a>
+    <a class="card" href="block-2.html">
+      <div class="card-num">Блок 2</div>
+      <span class="card-icon">⚙️</span>
+      <h3>Как работает DMP</h3>
+      <p>База, конвейер КЦ → СМС → Робот, маршрутизация</p>
+      <span class="badge badge-ready">Готов</span>
+    </a>
+    <a class="card" href="block-3.html">
+      <div class="card-num">Блок 3</div>
+      <span class="card-icon">📊</span>
+      <h3>Метрики и ритм</h3>
+      <p>Воронка Зари, дашборды, дейлики и митинги</p>
+      <span class="badge badge-ready">Готов</span>
+    </a>
+    <a class="card" href="#">
+      <div class="card-num">Блок 4</div>
+      <span class="card-icon">🧠</span>
+      <h3>Логика решений</h3>
+      <p>Приоритеты, маршрутизация, когда эскалировать</p>
+      <span class="badge badge-wip">В работе</span>
+    </a>
+    <a class="card" href="block-5.html">
+      <div class="card-num">Блок 5</div>
+      <span class="card-icon">🎯</span>
+      <h3>Роль и цели</h3>
+      <p>Зона ответственности, метрики и первые 30 дней</p>
+      <span class="badge badge-ready">Готов</span>
+    </a>
+  </div>
+
+  <div class="sec-hdr">
+    <span class="sec-label">DMP Book</span>
+    <span class="sec-count">5 частей</span>
+  </div>
+
+  <div class="grid">
+    <a class="card card-wide" href="dmp-book.html">
+      <div>
+        <div class="card-num">Часть 1</div>
+        <span class="card-icon">🗺</span>
+        <h3>Магистральный процесс</h3>
+        <p>Картина целиком — от конкурента до прибыли. Полная карта всех этапов и как они связаны между собой.</p>
+        <span class="badge badge-soon">Скоро</span>
+      </div>
+      <div class="card-parts">
+        <div class="card-part"><strong>Парсинг</strong><span>Сбор конкурентов и точек входа</span></div>
+        <div class="card-part"><strong>Операторы</strong><span>Работа с сотовыми операторами</span></div>
+        <div class="card-part"><strong>Конвейер</strong><span>КЦ → СМС → Робот</span></div>
+        <div class="card-part"><strong>Монетизация</strong><span>Заря, ПП, продажа данных</span></div>
+      </div>
+    </a>
+    <a class="card" href="#">
+      <div class="card-num">Часть 2</div>
+      <span class="card-icon">📋</span>
+      <h3>Блоки процесса</h3>
+      <p>Каждый этап подробно: парсинг, база, конвейер, маршрутизация</p>
+      <span class="badge badge-soon">Скоро</span>
+    </a>
+    <a class="card" href="#">
+      <div class="card-num">Часть 3</div>
+      <span class="card-icon">🎚</span>
+      <h3>Рычаги влияния</h3>
+      <p>Объём, скорость, конверсия, маршрутизация — внутренние и внешние</p>
+      <span class="badge badge-soon">Скоро</span>
+    </a>
+    <a class="card" href="#">
+      <div class="card-num">Части 4–5</div>
+      <span class="card-icon">🏗</span>
+      <h3>Отделы и управление</h3>
+      <p>Кто что делает и как руководить направлением каждый день</p>
+      <span class="badge badge-soon">Скоро</span>
+    </a>
+  </div>
+
+  <hr class="divider">
+  <p class="footer">Внутренний документ СОДА · DMP БФЛ</p>
+</div>
+</body>
+</html>

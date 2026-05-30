@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DMP — Вход</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #fafafa;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gate {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 16px;
+    padding: 48px 40px;
+    width: 100%;
+    max-width: 360px;
+  }
+  .logo {
+    width: 36px; height: 36px;
+    background: #1a1a1a;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 11px; font-weight: 600;
+    letter-spacing: -0.3px;
+    margin-bottom: 24px;
+  }
+  h1 { font-size: 20px; font-weight: 500; color: #1a1a1a; margin-bottom: 6px; }
+  .sub { font-size: 14px; color: #888; margin-bottom: 32px; }
+  label { font-size: 12px; color: #888; display: block; margin-bottom: 8px; }
+  input[type="password"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    color: #1a1a1a;
+    outline: none;
+    transition: border-color 0.15s;
+    margin-bottom: 12px;
+  }
+  input[type="password"]:focus { border-color: #aaa; }
+  button {
+    width: 100%;
+    padding: 10px;
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.15s;
+  }
+  button:hover { opacity: 0.85; }
+  .error {
+    font-size: 12px;
+    color: #c0392b;
+    margin-top: 10px;
+    display: none;
+  }
+  .footer { font-size: 11px; color: #ccc; margin-top: 32px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="gate">
+  <div class="logo">DMP</div>
+  <h1>База знаний DMP</h1>
+  <p class="sub">Внутренний портал СОДА</p>
+  <label>Пароль</label>
+  <input type="password" id="pwd" placeholder="Введите пароль" onkeydown="if(event.key==='Enter')check()">
+  <button onclick="check()">Войти</button>
+  <p class="error" id="err">Неверный пароль</p>
+  <p class="footer">СОДА · DMP БФЛ</p>
+</div>
+<script>
+  // Если уже авторизован — сразу на главную
+  if (sessionStorage.getItem('dmp_auth') === '1') location.href = 'main.html';
+
+  function check() {
+    // Измени пароль здесь ↓
+    var PASSWORD = 'soda2025';
+    var val = document.getElementById('pwd').value;
+    if (val === PASSWORD) {
+      sessionStorage.setItem('dmp_auth', '1');
+      location.href = 'main.html';
+    } else {
+      document.getElementById('err').style.display = 'block';
+    }
+  }
+</script>
+</body>
+</html>
